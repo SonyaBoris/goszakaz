@@ -1,0 +1,13 @@
+.navigation{
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+}
+
+.navigation__tel{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-color);
+  font-weight: 600;
+}

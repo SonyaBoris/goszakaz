@@ -1,0 +1,33 @@
+.logo {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  overflow: hidden; 
+}
+
+.logo__circle {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  background: white;
+  /* animation: move-circle 4s linear infinite; */
+  border-radius: 100%;
+}
+
+.logo > .logo__circle {  
+  transform-origin: 20px 20px;
+  animation-name: move-circle;
+}
+
+@keyframes move-circle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

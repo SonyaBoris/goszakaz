@@ -1,0 +1,44 @@
+:root{
+  --accent-color:#5D71DD;
+}
+@font-face {
+  font-family: "FuturaPTBook"; 
+  src: url("./assets/fonts/FuturaPT-Book.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+} 
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "FuturaPTBook", sans-serif; 
+  background-color: #F9F9F9;
+  color: #2F2222;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+h3{
+  font-size: 24px;
+}
+
+.container{
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.active{
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+}

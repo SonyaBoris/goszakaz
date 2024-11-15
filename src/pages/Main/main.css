@@ -1,0 +1,38 @@
+.image{
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.content{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.articles{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.articles__container-one{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.articles__container-two{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
+
+.articles__container-three{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 400px;
+}

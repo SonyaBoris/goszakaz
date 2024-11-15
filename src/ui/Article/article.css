@@ -1,0 +1,43 @@
+.article{
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.article__content{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.article__content-small{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.small{
+  height: 180px;
+}
+
+.article__head{
+  display: flex;
+  justify-content: space-between;
+}
+
+.article__head-category{
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #F7F8FD;
+  color: var(--accent-color);
+}
+
+.article__head-date{
+  color: rgba(47, 34, 34, 0.4);
+}
+
+.article__text{
+  font-size: 18px;
+  color: rgba(47, 34, 34, 0.4);
+}
