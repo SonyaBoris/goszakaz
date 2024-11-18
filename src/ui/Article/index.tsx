@@ -7,7 +7,7 @@ type TProps = {
 
 const Article: FC<TProps> = ({ size }) => {
   return (
-    <article className={size === "m" ? "article" : "article small"}>
+    <article tabIndex={1} className={size === "m" ? "article" : "article small"}>
       <div className={size === "m" ? "article__content" : "article__content-small"}>
         <header className="article__head">
           <span className="article__head-category">Категория 1</span>

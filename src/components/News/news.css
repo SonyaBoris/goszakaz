@@ -1,0 +1,33 @@
+.news{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.new{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid rgba(47, 34, 34, 0.1);;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.new:last-child{
+  border: none;
+}
+
+.new:hover .new__title{
+  color: var(--accent-color);
+}
+
+.new__title{
+  font-size: 18px;
+  color: #2f2222;
+  transition: color .2s ease-in-out;
+}
+
+.new__date{
+  color: rgba(47, 34, 34, 0.4);
+}

@@ -14,7 +14,8 @@
   width: 24px;
   height: 24px;
   background: white;
-  /* animation: move-circle 4s linear infinite; */
+  box-shadow: 0 4px 4px 0 rgba(57, 70, 136, 0.18);
+  animation: move-circle 4s linear infinite;
   border-radius: 100%;
 }
 

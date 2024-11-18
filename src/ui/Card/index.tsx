@@ -2,7 +2,7 @@ import './card.css'
 
 const Card = () => {
   return (
-    <article className='card'>
+    <article tabIndex={1} className='card'>
       <div className="card__head">
         <span className="card__head-category">Категория 1</span>
         <h3>ITAM&SAMDay – самая настоящая удача!</h3>
