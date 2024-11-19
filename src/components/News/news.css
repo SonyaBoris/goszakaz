@@ -31,3 +31,28 @@
 .new__date{
   color: rgba(47, 34, 34, 0.4);
 }
+
+@media (max-width: 1300px){
+  .news__list{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .new{
+    flex: 1;
+    border: none;
+  }
+  .new__title{
+    height: 46px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 800px) {
+  .news__title{
+    text-align: center;
+  }
+  .news__list{
+    flex-direction: column;
+  }
+}

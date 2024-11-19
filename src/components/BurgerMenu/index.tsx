@@ -1,21 +1,26 @@
 import { NavLink } from "react-router-dom";
 import PHONE from "../../assets/image/phone.svg"
-import "./navigation.css"
+import "./burgermenu.css"
+import { FC } from "react";
 
-const Navigation = () => {
+type TProps = {
+  open: () => void;
+}
+
+const BurgerMenu: FC<TProps> = ({ open }) => {
   return (
-    <nav className="desktop__nav">
-      <ul className="navigation">
-        <li>
+    <nav className="mobile__navigation">
+      <ul className="nav">
+        <li onClick={open}>
           <NavLink to="/">Главная</NavLink>
         </li>
-        <li>
+        <li onClick={open}>
           <NavLink to="/about">О нас</NavLink>
         </li>
-        <li>
+        <li onClick={open}>
           <NavLink to="/contact">Контакты</NavLink>
         </li>
-        <li>
+        <li onClick={open}>
           <NavLink to="/search">Поиск</NavLink>
         </li>
         <li>
@@ -31,4 +36,4 @@ const Navigation = () => {
   );
 }
 
-export default Navigation;
+export default BurgerMenu;

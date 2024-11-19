@@ -24,15 +24,16 @@ const News = () => {
   return (
     <article className="news">
       <h3 className="news__title">Популярные новости</h3>
-      {
-        mockNews.map(item =>
-          <div className="new">
-            <h4 className="new__title">{item.text}</h4>
-            <span className="new__date">{item.date}</span>
-          </div>
-        )}
-        <Form />
-
+      <div className="news__list">
+        {
+          mockNews.map(item =>
+            <div className="new">
+              <h4 className="new__title">{item.text}</h4>
+              <span className="new__date">{item.date}</span>
+            </div>
+          )}
+      </div>
+      <Form />
     </article>
   );
 }

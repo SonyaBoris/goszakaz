@@ -37,7 +37,7 @@ const Pagination = () => {
   };
 
   return (
-    <nav aria-label="pagination">
+    <nav>
       <ul className="pagination">
         {renderPages()}
         <li>

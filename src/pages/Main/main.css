@@ -36,3 +36,22 @@
   gap: 40px;
   height: 400px;
 }
+
+@media (max-width: 1300px) {
+  .image{
+    height: 250px;
+  }
+  .content{
+    grid-template-columns: 1fr;
+  }  
+}
+
+@media (max-width: 800px) {
+  .articles__container-one,
+  .articles__container-two{
+    grid-template-columns: 1fr;
+  }
+  .image{
+    height: 150px;
+  }
+}

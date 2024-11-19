@@ -1,8 +1,21 @@
 .input{
+  flex: 1;
   border-radius: 20px;
   padding: 13px 32px 13px 30px;
   background: #f5f5f5;
   border: none;
   font-size: 18px;
   color: rgba(47, 34, 34, 0.4);
+}
+
+@media (max-width: 1300px){
+  .input{
+    width: 380px;
+  }
+}
+
+@media (max-width: 800px){
+  .input{
+    width: 100%;
+  }
 }

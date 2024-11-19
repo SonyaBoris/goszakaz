@@ -1,8 +1,36 @@
 .form{
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
   padding: 40px 30px;
   border-radius: 20px;
   background-color: #fff;
+}
+.form__content{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form__container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1300px) {
+  .form__content{
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .form__container{
+    width: 100%;
+  }
+  .form__content{
+    flex-direction: column;
+    gap: 20px;
+  }
 }

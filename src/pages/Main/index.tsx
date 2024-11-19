@@ -37,10 +37,10 @@ const MainPage = () => {
                 <Article size="s" />
               </div>
             </div>
+            <Pagination />
           </section>
           <News />
         </div>
-        <Pagination />
       </div>
       <Footer />
     </AnimatedSwitch>

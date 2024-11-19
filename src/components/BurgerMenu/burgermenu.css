@@ -1,0 +1,12 @@
+.mobile__navigation{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background-color: #F9F9F9;
+  width: 100%;
+  top: 68px;
+  left: 0;
+  padding: 20px;
+  font-size: 20px;
+  z-index: 10;
+}
