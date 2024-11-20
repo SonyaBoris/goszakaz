@@ -1,10 +1,15 @@
 import Button from "../Button";
 import Input from "../Input";
-import "./form.css"
+import { motion } from "framer-motion";
+import "./form.css";
 
 const Form = () => {
   return (
-    <form className="form">
+    <motion.form 
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5, delay: 2}}
+    className="form">
       <div className="form__container">
         <h3>Подписка на рассылку</h3>
         <div className="form__content">
@@ -14,7 +19,7 @@ const Form = () => {
           </Button>
         </div>
       </div>
-    </form>
+    </motion.form>
   );
 }
 

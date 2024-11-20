@@ -1,28 +1,53 @@
 import { NavLink } from "react-router-dom";
-import PHONE from "../../assets/image/phone.svg"
-import "./burgermenu.css"
+import PHONE from "../../assets/image/phone.svg";
+import { motion } from 'framer-motion';
 import { FC } from "react";
+import "./burgermenu.css";
 
 type TProps = {
   open: () => void;
+  openBurger: boolean;
 }
 
-const BurgerMenu: FC<TProps> = ({ open }) => {
+const menu = [
+  {
+    id: 1,
+    title: "Главная",
+    path: "/"
+  },
+  {
+    id: 2,
+    title: "О нас",
+    path: "/about"
+  },
+  {
+    id: 3,
+    title: "Контакты",
+    path: "/contact"
+  },
+  {
+    id: 4,
+    title: "Поиск",
+    path: "/search"
+  }
+]
+
+const BurgerMenu: FC<TProps> = ({ open, openBurger }) => {
   return (
-    <nav className="mobile__navigation">
+    <motion.nav
+      initial={{ opacity: 0, x: '-100%' }}
+      animate={{ opacity: openBurger ? 1 : 0, x: openBurger ? 0 : '-100%' }}
+      exit={{ opacity: 0, x: '-100%' }}
+      transition={{ duration: 0.3 }}
+      className="mobile__navigation">
       <ul className="nav">
-        <li onClick={open}>
-          <NavLink to="/">Главная</NavLink>
-        </li>
-        <li onClick={open}>
-          <NavLink to="/about">О нас</NavLink>
-        </li>
-        <li onClick={open}>
-          <NavLink to="/contact">Контакты</NavLink>
-        </li>
-        <li onClick={open}>
-          <NavLink to="/search">Поиск</NavLink>
-        </li>
+        {
+          menu.map(i =>
+            <li onClick={open} key={i.id}>
+              <NavLink to={i.path}>{i.title}</NavLink>
+            </li>
+          )
+        }
         <li>
           <a className="navigation__tel" href="tel:+79878878787">
             <img src={PHONE} alt="Иконка телефона" />
@@ -32,7 +57,7 @@ const BurgerMenu: FC<TProps> = ({ open }) => {
           </a>
         </li>
       </ul>
-    </nav>
+    </motion.nav>
   );
 }
 

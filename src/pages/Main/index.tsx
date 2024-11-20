@@ -1,49 +1,59 @@
-import AnimatedSwitch from "../../ui/Animated/AnimatedSwitch";
-import Pagination from "../../ui/Pagination";
-import Article from "../../ui/Article";
-import Card from "../../ui/Card";
 import MAIN from "../../assets/image/main.jpg"
-import News from "../../components/News";
-import "./main.css"
-import Footer from "../../components/Footer";
+import { lazy, Suspense } from "react";
+import { motion } from 'framer-motion';
+import "./main.css";
+
+const Article = lazy(() => import('../../ui/Article'));
+const Card = lazy(() => import('../../ui/Card'));
+const Pagination = lazy(() => import('../../ui/Pagination'));
+const News = lazy(() => import('../../components/News'));
+const Footer = lazy(() => import("../../components/Footer"));
 
 const MainPage = () => {
   return (
-    <AnimatedSwitch>
-      <img className="image" src={MAIN} alt="Картинка" />
+    <>
+      <motion.img
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        loading='lazy' className="image" src={MAIN} alt="Картинка" />
       <div className="container">
         <div className="content">
           <section className="articles">
-            <Article size="m" />
-            <div className="articles__container-one">
+            <Suspense fallback={<div>Loading...</div>}>
               <Article size="m" />
-              <Card />
-            </div>
-            <div className="articles__container-two">
-              <Card />
-              <div className="articles__container-three">
-                <Article size="s" />
-                <Article size="s" />
+              <div className="articles__container-one">
+                <Article size="m" />
+                <Card />
               </div>
-            </div>
-            <div className="articles__container-one">
-              <Article size="m" />
-              <Card />
-            </div>
-            <div className="articles__container-two">
-              <Card />
-              <div className="articles__container-three">
-                <Article size="s" />
-                <Article size="s" />
+              <div className="articles__container-two">
+                <Card />
+                <div className="articles__container-three">
+                  <Article size="s" />
+                  <Article size="s" />
+                </div>
               </div>
-            </div>
-            <Pagination />
+              <div className="articles__container-one">
+                <Article size="m" />
+                <Card />
+              </div>
+              <div className="articles__container-two">
+                <Card />
+                <div className="articles__container-three">
+                  <Article size="s" />
+                  <Article size="s" />
+                </div>
+              </div>
+              <Pagination />
+            </Suspense>
           </section>
           <News />
         </div>
       </div>
-      <Footer />
-    </AnimatedSwitch>
+      <Suspense fallback={<div>Loading Footer...</div>}>
+        <Footer />
+      </Suspense>
+    </>
   );
 }
 

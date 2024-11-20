@@ -1,5 +1,6 @@
 import Form from "../../ui/Form";
-import "./news.css"
+import { motion } from "framer-motion";
+import "./news.css";
 
 const mockNews = [
   {
@@ -22,19 +23,23 @@ const mockNews = [
 
 const News = () => {
   return (
-    <article className="news">
+    <motion.article 
+    initial={{ opacity: 0, x: 100 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.5, delay: 0.5 }}
+    className="news">
       <h3 className="news__title">Популярные новости</h3>
       <div className="news__list">
         {
           mockNews.map(item =>
-            <div className="new">
+            <div key={item.id} className="new">
               <h4 className="new__title">{item.text}</h4>
               <span className="new__date">{item.date}</span>
             </div>
           )}
       </div>
       <Form />
-    </article>
+    </motion.article>
   );
 }
 

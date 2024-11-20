@@ -52,3 +52,9 @@
   font-size: 18px;
   color: rgba(47, 34, 34, 0.4);
 }
+
+@media (max-width: 600px) {
+  .small{
+    height: 100%;
+  }
+}

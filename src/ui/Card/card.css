@@ -29,3 +29,9 @@
   background: #7d8de4;
   color: #fff;
 }
+
+@media (max-width: 600px) {
+  .card{
+    padding: 20px;
+  }
+}

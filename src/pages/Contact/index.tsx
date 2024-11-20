@@ -1,10 +1,8 @@
-import AnimatedSwitch from "../../ui/Animated/AnimatedSwitch";
-import "./contact.css"
+import "./contact.css";
 
 const ContactPage = () => {
   return (
     <main>
-      <AnimatedSwitch>
         <div className="contact">
           <span>Contact page</span>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis reprehenderit pariatur aliquid sed voluptatum ut ipsam sapiente, alias, veritatis, illum mollitia. Odio deserunt autem accusamus deleniti facere ullam voluptatibus neque!
@@ -13,9 +11,6 @@ const ContactPage = () => {
           Sit porro laboriosam alias totam obcaecati quas recusandae odio suscipit voluptatem laudantium, debitis, expedita itaque nemo ratione quo eius. Facere ad voluptas officia voluptatum iusto ipsum delectus fugit neque molestiae.
           Reiciendis minima nisi iste sunt ullam eveniet hic ad voluptate doloremque iusto, reprehenderit aliquam cumque aliquid. Facilis officiis debitis repellat eos reiciendis quod corporis voluptatum, et odit omnis veritatis rem?</p>
         </div>
-
-      </AnimatedSwitch>
-
     </main>
   );
 }

@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import './pagination.css'
+import { useState } from 'react';
 import Button from '../Button';
+import './pagination.css';
 
 const Pagination = () => {
   const [currentPage, setCurrentPage] = useState(1)
@@ -18,18 +18,18 @@ const Pagination = () => {
   }
 
   const renderPages = () => {
-    let pages = []
+    const pages = []
     for (let i = 1; i <= 4; i++) {
       pages.push(
-        <li key={i} className={currentPage === i ? 'active' : ''}>
+        <li key={`page-${i}`} className={currentPage === i ? 'active' : ''}>
           <a href="#" onClick={() => handleClick(i)}>{i}</a>
         </li>
       )
     }
-    pages.push(<li><span>...</span></li>)
+    pages.push(<li key="dots"><span>...</span></li>)
 
     pages.push(
-      <li key={10} className={currentPage === 10 ? 'active' : ''}>
+      <li key="page-10" className={currentPage === 10 ? 'active' : ''}>
         <a href="#" onClick={() => handleClick(10)}>10</a>
       </li>
     )

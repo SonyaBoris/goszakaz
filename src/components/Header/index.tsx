@@ -2,8 +2,9 @@ import { useState } from "react";
 import Logo from "../../ui/Logo";
 import Burger from "../Burger";
 import Navigation from "../Navigation";
-import "./header.css"
 import BurgerMenu from "../BurgerMenu";
+import { AnimatePresence } from "framer-motion";
+import "./header.css";
 
 const Header = () => {
 
@@ -18,9 +19,12 @@ const Header = () => {
         <Logo />
         <Navigation />
         <Burger openBurger={openBurger} open={open} />
-        {
-          openBurger && <BurgerMenu  open={open} />
-        }
+        <AnimatePresence>
+          {
+          openBurger && <BurgerMenu  open={open} openBurger={openBurger} />
+        }  
+        </AnimatePresence>
+      
       </div>
     </header>
   );

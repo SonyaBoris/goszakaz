@@ -53,3 +53,9 @@
 .primary:hover svg path{
   fill: #fff;
 }
+
+@media (max-width: 600px) {
+  .main{
+    min-width: 200px;
+  }
+}
